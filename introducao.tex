@@ -1,0 +1,72 @@
+%%
+%
+% ARQUIVO: cap-01.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2016
+% AUTOR: Coordenação de Trabalhos Especiais SE/8
+% 
+%  Arquivo tex de exemplo de capítulo do documento de Projeto de Fim de Curso.
+%
+% ---
+% DETALHES
+%  a. todo capítulo deve começar com \chapter{•}
+%  b. usar comando \noindent logo após \chapter{•}
+%  c. citações para referências podem ser
+%       i. \citet{•} para citações diretas (p. ex. 'Segundo Autor (2015)...'
+%       ii. \citep{•} para citações indiretas (p. ex. '... (AUTOR, 2015)...'
+%  d. notas de rodapé devem usar dois comandos
+%       i. \footnotemark para indicar a marca da nota no texto
+%       ii. \footnotetext{•}, na sequência, para indicar o texto da nota de rodapé
+%  e. figuras devem seguir o exemplo
+%       i. devem ficar no diretório /img e devem ser no formato EPS
+%  f. tabelas devem seguir o exemplo
+%  g. figuras e tabelas podem ser colocadas em orientação landscape
+%       i. figuras: usar \begin{sidewaysfigure} ... \end{sidewaysfigure}
+%                   em vez de \begin{figure} ... \end{figure}
+%       ii. tabelas: usar \begin{sidewaystable} ... \end{sidewaystable}
+%                    em vez de \begin{table} ... \end{table}
+%  h. toda figura e tabela deve ser referenciada ao longo do texto com \ref{•}
+% ---
+%%
+
+\chapter{Introdução}
+\noindent
+
+É muito difícil elaborar programas em \textit{brainfuck}. Porém, é fácil programar em linguagens estruturadas. Portanto se propõe a criação de uma linguagem estruturada (\textbf{\textit{Headache}}) cujo compilador gere código \textit{brainfuck}.				
+
+A linguagem \textit{brainfuck} é uma das mais simples representações de uma máquina de Turing. Assim, \textit{Headache} poderia ser útil como exemplo de completude-Turing (Turing-completeness), uma vez que mostra que um código genérico é passível de ser transformado em 8 instruções simples. No entanto, esse objetivo é secundário.
+
+O objetivo primário deste trabalho é o estudo de elaboração de linguagens de programação e de técnicas de compilação e otimização. \textit{Brainfuck} é utilizada aqui como contexto de desafio técnico. Tal trabalho permite o exercício de diversos conteúdos aprendidos no curso, desde estruturas de dados, até prática de teste de software. 	
+
+\section{Projetos similares}
+Há projetos similares a \textit{Headache} que são dignos de nota: \textit{Brain} é uma linguagem com a sintaxe similar à linguagem \textit{Rust} que compila para \textit{Brainfuck}. \textit{Headache} se diferencia de \textit{Brain} por ter a sintaxe similar a C e monga além de focar majoritariamente em ser uma distribuição tão leve e tão fácil de instalar quanto possível.
+
+\section{Sobre o ambiente computacional}
+O sistema está sendo desenvolvido em ambiente unix, (mais especificamente em um computador \textit{Mac OS Sierra}). Para edição de código é utilizado o \textit{Sublime Text 3}. A compilação é regida por um arquivo \textit{Makefile}. Não há IDE. Os testes são regidos por scripts \textit{shell}. O projeto é versionado utilizando \texit{git} e possui um repositório público no \textit{github}. O projeto foi desenvolvido em \textit{C99}. O analisador léxico e o analisador sintático foram desenvolvidos utilizando o \textit{flex} e o \textit{bison} respectivamente. Há um arquivo de descrição de \textit{tokens} (\textit{rules.lex}) e um arquivo de regras sintáticas e criação da AST (\textit{grammar.y}) ambos geram arquivos .c que são compilados conjuntamente aos outros arquivos fonte.
+
+Assim, o projeto depende apenas de C99, \textit{Flex, Bison} e \textit{Unix Shell}.
+
+É oportuno destacar aqui que os objetivos ao escolher essas tecnologias são os seguintes: \textit{Flex} e \textit{Bison} são escolhidos aqui porque são ferramentas bem conhecidas e bem documentadas, com as quais trabalhei anteriormente, que resolvem o problema dos analisadores léxico e sintático de uma forma muito satisfatória.
+
+C99 foi escolhido para integrar diretamente os outputs do \textit{Bison} e do \textit{Flex} e por ser uma versão relativamente recente da mesma linguagem. Além disso, compiladores de C costumam vir instalados (ou ser de fácil instalação) em sistemas \textit{unix}. C também é escolhida por sua alta velocidade de execução nas suas instalações padrão.
+
+\textit{Unix Shell} foi escolhida também por já estar presente nos sistemas unix e porque fornece uma maneira fácil de redigir \textit{scripts} aproveitando programas úteis como \textit{rm, mv, cmp} e \textit{diff}.
+
+As tecnologias utilizadas foram decididas por facilidade que algum usuário de um sistema \textit{unix} teria ao tentar clonar o projeto do \textit{github} e tentar executá-lo. \textit{\textbf{Headache}} foi planejada para ser perfeitamente utilizável por um usuário padrão do \textit{github.com} a partir de comandos simples como:
+
+\begin{verbatim}
+    git clone https://github.com/LucasMW/Headache
+    cd Headache
+    make
+\end{verbatim}
+
+Caso o usuário não tivesse o \textit{flex} ou o \textit{bison} instalados, os pode instalar com simples comandos como 
+\begin{verbatim} apt-get install flex bison \end{verbatim} 
+ou 
+\begin{verbatim} brew install flex bison \end{verbatim} e rodar novamente os comandos acima.
+
+Nota: Embora \textit{Headache} possa ser compilada para \textit{Windows} e exista um \textit{branch} no \textit{github} dedicado a isso, a \textit{build Windows} não tem suporte oficial.
+
+\section{Adequação do trabalho como Projeto Final}
+Este trabalho permitiu o treino de habilidades que são muito úteis no desenvolvimento de \textit{software}. Dentre elas, permitiu o aproveitamento e adaptação de código legado, permitiu o treino de manutenção de repositório \textit{github} (\textit{Headache} tem o \textit{branch master}, além de um \textit{branch} específico para \textit{mac, linux} e \textit{windows}, para gerar os \textit{releases} específicos) assim como cuidar da \textit{wiki} do projeto. Além disso, \textit{Headache} é um desafio técnico considerável, ordens de grandeza mais desafiador do que foi compilar \textit{monga} para \textit{llvm}. 

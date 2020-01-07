@@ -1,0 +1,74 @@
+%%
+%
+% ARQUIVO: cap-02.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2017
+% AUTOR: Carla Cosenza, Matheus Mello, Rebeca Reis
+% 
+%  Arquivo tex de exemplo de capítulo do documento de Projeto de Fim de Curso.
+%
+% ---
+% DETALHES
+%  a. todo capítulo deve começar com \chapter{•}
+%  b. usar comando \noindent logo após \chapter{•}
+%  c. citações para referências podem ser
+%       i. \citet{•} para citações diretas (p. ex. 'Segundo Autor (2015)...'
+%       ii. \citep{•} para citações indiretas (p. ex. '... (AUTOR, 2015)...'
+%  d. notas de rodapé devem usar dois comandos
+%       i. \footnotemark para indicar a marca da nota no texto
+%       ii. \footnotetext{•}, na sequência, para indicar o texto da nota de rodapé
+%  e. figuras devem seguir o exemplo
+%       i. devem ficar no diretório /img e devem ser no formato EPS
+%  f. tabelas devem seguir o exemplo
+%  g. figuras e tabelas podem ser colocadas em orientação landscape
+%       i. figuras: usar \begin{sidewaysfigure} ... \end{sidewaysfigure}
+%                   em vez de \begin{figure} ... \end{figure}
+%       ii. tabelas: usar \begin{sidewaystable} ... \end{sidewaystable}
+%                    em vez de \begin{table} ... \end{table}
+%  h. toda figura e tabela deve ser referenciada ao longo do texto com \ref{•}
+% ---
+%%
+
+\chapter{Considerações finais}
+\noindent
+
+\section{Contribuições desse trabalho para a comunidade}
+Usuários e criadores linguagens esotéricas se animaram com o trabalho. O repositório de Headache teve um fork do criador da brain-lang (uma extensão de brainfuck com mais comandos, não confundir com o projeto homônimo similar à Headache)  para adaptar o hac para que este compilasse para brain. Headache também teve uma entrada (escrita por mim) na esolangs.org. 
+
+Conforme foi mencionado anteriormente, a "pesquisa em brainfuck” continua ocorrendo: A Brainfuck Algorithms recebe novos códigos; otimizadores de brainfuck são criados; projetos similares a Headache surgiram no mesmo ano, mesmo sem contato comum conhecido; e outras linguagem esotéricas baseadas em brainfuck continuam a ser criadas.
+
+Headache coroa como uma dessas pesquisas, com atualmente 14 estrelas no github. (Sexto lugar na pesquisa “esoteric-programming-language” ; Décimo-quinto na pesquisa “esolang” e décimo terceiro na tag “brainfuck” - quando o relatório foi escrito).
+
+Se Headache alcançar 50 estrelas no github, pode ser considerado famoso o suficiente para figurar no Homebrew: o package manager não oficial do mac OS (segundo o critério do Homebrew para criar novos pacotes) .
+
+\section{O que foi aprendido}
+Melhor domínio do git. Manusear forks públicos no github. Extensão de bitwidth em brainfuck. Uso de elipses em C. Otimização básica de constantes. Redigir make install. Redigir interpretação de parâmetro; Redigir testes que envolvessem a execução de de código gerado. Utilizar o minGW para compilar programas C Unix no Windows.
+
+Se eu começasse a fazer Headache hoje, pensaria em implementá-la em rust contra implementá-lo em C. Mas o mais importante é que eu faria o source do zero ao invés de começar a trabalhar a partir do source do mongaComp, apenas utilizando-o para consulta. Por mais que tenha me permitido refatorar o código do projeto original, isso acabou acoplando código desnecessário ao hac que acabou passando às revisões. O código poderia ser muito reduzido se isso não tivesse sido feito. 
+
+Também o faria direto numa implementação sem registradores, baseada apenas no uso de heap fixo e liberado após cada execução, tudo calculado estaticamente (no momento de compilação).
+
+
+\section{Oportunidades para trabalhos futuros}
+Um próximo aluno poderia resolver os bugs do hac ou implementar mais features. Headache abre espaços para receber muitas contribuições de tipos diferentes: 
+
+Implementar novas features na linguagem, por exemplo: 
+
+Arrays dinâmicos; 
+
+Variáveis real; 
+
+(Existe uma lista de features planejadas que não chegaram a ser implementadas neste mesmo relatório). Seriam todas extremamente bem vindas a integrar o repositório.
+
+Implementar novas otimizações em -O1 -O2 ou -O3.
+
+Otimizar o código do hac. 
+
+Nota: Há uma diferença entre otimizar os algoritmos e o modelo de memória que Headache se baseia para gerar o código output e adicionar otimizações de AST (que é o que é ativado nas opções -O1, -O2, -O3). As otimizações de AST são, basicamente, conversões de conjuntos de instruções em conjuntos menores e mais rápidos que tenham o mesmo efeito ainda dentro da representação interna do compilador (Headache -> Headache). É diferente de otimizar a geração de código, isto é, como certas estruturas da linguagem são transformadas em código output.
+
+Fazer um fork no repositório github para que Headache seja compilada em uma variante de brainfuck, ou outra linguagem esotérica como whitespace.
+
+Headache foi concebida para ser open source e receber pull requests de vários colaboradores. Há muitos ramos diferentes que podem ser explorados por uma aluno que queira realizar melhorias
+
+\phantom{\cite{Peres}, \cite{Pegg}, \cite{Clifford}, \cite{Hughes}, \cite{Github}, \cite{Libbf}, \cite{BrainfuckCode}, \cite{BrainfuckUtil}, \cite{GoogleCode}, \cite{BFO}, \cite{BrainfuckDummies}, \cite{BrainfuckA}, \cite{Brainfuck}}

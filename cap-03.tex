@@ -1,0 +1,64 @@
+%%
+%
+% ARQUIVO: cap-02.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2017
+% AUTOR: Carla Cosenza, Matheus Mello, Rebeca Reis
+% 
+%  Arquivo tex de exemplo de capítulo do documento de Projeto de Fim de Curso.
+%
+% ---
+% DETALHES
+%  a. todo capítulo deve começar com \chapter{•}
+%  b. usar comando \noindent logo após \chapter{•}
+%  c. citações para referências podem ser
+%       i. \citet{•} para citações diretas (p. ex. 'Segundo Autor (2015)...'
+%       ii. \citep{•} para citações indiretas (p. ex. '... (AUTOR, 2015)...'
+%  d. notas de rodapé devem usar dois comandos
+%       i. \footnotemark para indicar a marca da nota no texto
+%       ii. \footnotetext{•}, na sequência, para indicar o texto da nota de rodapé
+%  e. figuras devem seguir o exemplo
+%       i. devem ficar no diretório /img e devem ser no formato EPS
+%  f. tabelas devem seguir o exemplo
+%  g. figuras e tabelas podem ser colocadas em orientação landscape
+%       i. figuras: usar \begin{sidewaysfigure} ... \end{sidewaysfigure}
+%                   em vez de \begin{figure} ... \end{figure}
+%       ii. tabelas: usar \begin{sidewaystable} ... \end{sidewaystable}
+%                    em vez de \begin{table} ... \end{table}
+%  h. toda figura e tabela deve ser referenciada ao longo do texto com \ref{•}
+% ---
+%%
+
+\chapter{Objetivos}
+\noindent
+O objetivo é ter a linguagem Headache implementada no compilador hac.
+É objetivo deste trabalho que o código gerado pelo hac seja executável em qualquer interpretador brainfuck de 8 bits decente. O interpretador é considerado decente, neste trabalho, se passa pelos testes elaborados por Daniel Cristofani (veja a referência \cite{BrainfuckFluff}). Estes testes estão na source tree de Headache numa suíte de testes própria.	
+
+Objetiva-se ter a linguagem Headache implementada gradualmente. Ao final do prazo de entrega do Projeto Final 2 espera-se que estejam corretamente implementados na linguagem os seguintes recursos funcionando plenamente:
+
+\begin{itemize}
+    \item Definição de variáveis de tipo inteiro (byte, short e int)
+    \item Expressões aritméticas de tipo inteiro (byte) 
+    \item Expressões aritméticas de inteiros de mais de 8 bits (short e int)
+    \item Atribuição de expressões a variáveis
+    \item Incrementos e Decrementos (++ e --)
+    \item Print de valores dinâmicos (constantes e variáveis)
+    \item Chamada de funções com e sem parâmetros
+    \item Funções com retorno
+    \item Condições e operadores lógicos
+    \item Comandos If/Else
+    \item Comandos While e For
+    \item Constantes do tipo String
+    \item Print de Strings
+    \item Leitura de números do console para variáveis
+    \item Cast automático de tipos inteiros
+\end{itemize}
+
+Ver também Anexo 1 para uma descrição mais completa das features da linguagem. Há, também, no documento um trecho sobre as features não implementadas.
+
+Além disso, Headache se destina a ser a implementação mais leve de uma linguagem que compila para Brainfuck. Objetiva também ter reconhecimento no github em buscas como 'Brainfuck' e 'esoteric-programming language' e que os entusiastas de Brainfuck e linguagens esotéricas tenham uma distribuição extremamente fácil de instalar. 
+
+Em relação ao estado da arte, Headache é, até o dia da conclusão escrita deste relatório, a única linguagem de programação que apresenta uma solução para compilar tipos inteiros de 16 ou mais bits em Brainfuck de 8 bits em seu código fonte.
+
+Também se almeja que Headache atinja bastante reconhecimento no github e seja referenciada na esolangs.org com menções honrosas.

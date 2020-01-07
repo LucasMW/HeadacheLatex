@@ -1,0 +1,47 @@
+%%
+%
+% ARQUIVO: cap-02.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2017
+% AUTOR: Carla Cosenza, Matheus Mello, Rebeca Reis
+% 
+%  Arquivo tex de exemplo de capítulo do documento de Projeto de Fim de Curso.
+%
+% ---
+% DETALHES
+%  a. todo capítulo deve começar com \chapter{•}
+%  b. usar comando \noindent logo após \chapter{•}
+%  c. citações para referências podem ser
+%       i. \citet{•} para citações diretas (p. ex. 'Segundo Autor (2015)...'
+%       ii. \citep{•} para citações indiretas (p. ex. '... (AUTOR, 2015)...'
+%  d. notas de rodapé devem usar dois comandos
+%       i. \footnotemark para indicar a marca da nota no texto
+%       ii. \footnotetext{•}, na sequência, para indicar o texto da nota de rodapé
+%  e. figuras devem seguir o exemplo
+%       i. devem ficar no diretório /img e devem ser no formato EPS
+%  f. tabelas devem seguir o exemplo
+%  g. figuras e tabelas podem ser colocadas em orientação landscape
+%       i. figuras: usar \begin{sidewaysfigure} ... \end{sidewaysfigure}
+%                   em vez de \begin{figure} ... \end{figure}
+%       ii. tabelas: usar \begin{sidewaystable} ... \end{sidewaystable}
+%                    em vez de \begin{table} ... \end{table}
+%  h. toda figura e tabela deve ser referenciada ao longo do texto com \ref{•}
+% ---
+%%
+
+\chapter{Situação Atual}
+\noindent
+Escrever programas em \textit{Brainfuck} é muito difícil. Isso faz com que a biblioteca de exemplos em \textit{Brainfuck} seja muito curta.
+
+Escrever, no entanto, programas de exemplo em linguagens estruturadas é fácil. Já existem algumas soluções que compilam de uma linguagem estruturada para \textit{Brainfuck}, porém são desconhecidas, a maioria dela são apenas soluções pessoais.
+
+\section{Descrição e avaliação de tecnologias e sistemas existentes}
+Em 2017, durante o desenvolvimento de Headache, surgiu uma solução similar nomeada \textit{Brain} feita em \textit{Rust}. Ela utiliza a sintaxe inspirada em \textit{Rust} e compila para \textit{Brainfuck}. Headache se diferencia da brain por usar uma sintaxe inspirada em C  (e em monga, por extensão). Além disso, o compilador hac foca em ser uma implementação leve (os binários pesam em torno de 100KB ) e rápida de um compilador, inclusive no tempo de compilação (3 segundos). 
+
+Já a Brain, demora 474.3 segundos para compilar no release,  possui 1,6 MB e mais 12 MB de dependência. 
+Existem outras soluções mais antigas como a ebf feitas nos anos 2000, porém estão perdidas em pastas compactadas em páginas antigas da internet. Muitas vezes não tem documentação, ou simplesmente não tem nenhuma usabilidade.
+
+Headache propõe contrapor esse ponto. A usabilidade hac é baseada diretamente na utilização do gcc e do clang. Algumas features como modo interativo foram adicionadas pensando no comportamento das distribuições linguagens interpretadas,.
+
+A usabilidade do repositório é baseada diretamente em padrões de simplicidade do github e de projetos unix. O repositório foi feito justamente para ser clonado, compilado e estar usável em menos de um minuto.

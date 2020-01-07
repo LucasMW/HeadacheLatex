@@ -1,0 +1,122 @@
+%%
+%
+% ARQUIVO: pre-texto.tex
+%
+% VERSÃO: 1.0
+% DATA: Maio de 2016
+% AUTOR: Coordenação de Trabalhos Especiais SE/8
+% 
+%  Arquivo tex para a criação da parte pré-textual do documento de Projeto de Fim de Curso.
+%
+%%
+
+
+% -----
+% PÁGINA DE CAPA DO DOCUMENTO DE PFC
+% -----
+\makecapa
+
+% -----
+% PÁGINA DE TÍTULO DO PFC
+% -----
+\prepareadvisors
+\maketitle
+
+% -----
+% PÁGINA DE CRÉDITOS DO DOCUMENTO DE PFC
+% -----
+
+% -----
+% PÁGINA DE FOLHA DE ASSINATURAS
+% -----
+\preparemembers
+
+% -----
+% PÁGINA DE DEDICATÓRIA (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% DEDICATÓRIA - PREENCHER...
+
+% -----
+% PÁGINA DE AGRADECIMENTOS (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% AGRADECIMENTOS - PREENCHER...
+\agradecimentos{%
+Agradeço ao Professor Roberto, por ter me mostrado o ramo de estudos sobre as linguagens de programação.  \\
+\indent
+Agradeço ao Professor Ivan, por ter me ensinado a codificar, que tanto tentei aprender sozinho sem sucesso.\\
+\indent
+Agradeço especialmente aos desenvolvedores do Valgrind, que possibilitaram a escrita deste software. \\
+\indent
+Agradeço especialmente aos contribuidores da esolangs.org, que escreveram os códigos da página \textit{Brainfuck Algorithms} sem os quais esse projeto seria impossível.\\
+\\
+\indent
+Agradeço aos meus professores da PUC por terem fornecido o ambiente no qual eu pude desenvolver tais conhecimentos. 
+}%
+\makethanks
+
+% -----
+% PÁGINA DE EPÍGRAFE (OPCIONAL, ie. pode remover toda a página)
+% -----
+%%% EPÍGRAFE - PREENCHER...
+\epigrafe{%
+Os poetas não enlouquecem, mas os jogadores de xadrez, sim.
+}%
+\autorepigrafe{%    %% Se não tem autor, coloque "Anônimo"
+Alan J. Perlis
+}%
+\epigrafe{%
+I think that it's extraordinarily important that we in computer science keep fun in computing. When it started out, it was an awful lot of fun..
+}%
+\autorepigrafe{%    %% Se não tem autor, coloque "Anônimo"
+Alan J. Perlis
+}%
+\makeepigraph
+
+% -----
+% PÁGINA DE SUMÁRIO
+% -----
+\tableofcontents
+
+% -----
+% PÁGINAS DE LISTAS DE FIGURAS E DE TABELAS
+% se a Dissertação não possui figuras e/ou tabelas, REMOVA O COMANDO CORRESPONDENTE
+% -----
+
+
+% -----
+% PÁGINA DE LISTA DE SIGLAS
+% se a Dissertação não possui siglas, REMOVA TODA A PÁGINA
+% -----
+%%% SIGLAS - PREENCHER...
+
+
+% -----
+% PÁGINA DE LISTA DE ABREVIATURAS
+% se a Dissertação não possui abreviaturas ou símbolos, REMOVA TODA A PÁGINA
+% -----
+%%% ABREVIATURAS - PREENCHER...
+
+
+% -----
+% PÁGINA DE RESUMO
+% -----
+%%% RESUMO - PREENCHER...
+\resumo{%
+Menezes Lucas. Ierusalimschy Roberto, Compilando pra Brainfuck – A Linguagem Headache - 44 páginas - Pontifícia Universidade Católica do Rio de Janeiro.
+Este documento descreve a linguagem de programação Headache e o seu compilador, hac (Headache Compiler).  Headache é uma linguagem de programação estruturada (bastante parecida com C) que é compilada para brainfuck de 8 bits. Neste documento é discutido como foi implementado, quais foram as técnicas, o modelo de memória e as estratégias utilizadas para fazer o sistema funcionar.\\
+\\
+Palavras-chaves: Brainfuck, Headache, Compilador, Linguagem de Programação.
+}%
+\makeresumo
+
+% -----
+% PÁGINA DE ABSTRACT
+% -----
+%%% ABSTRACT - PREENCHER...
+\abstract{%
+Menezes Lucas. Ierusalimschy Roberto, Compiling to Brainfuck – The Headache Programming Language -  44 pages - Pontifícia Universidade Católica do Rio de Janeiro
+This document describes the Headache Programming Language and its compiler, hac (Headache Compiler). Headache is a structured programming Language (which is very C-like) that is compiled to 8 bit brainfuck. In this document we discuss how it was implemented, the structures that were used, its memory model and the strategy used to bring everything working together.\\
+\\
+Keywords: Brainfuck, Headache, Compiler, Programming Language.
+}%
+\makeabstract
