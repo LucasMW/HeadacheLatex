@@ -1,0 +1,9 @@
+*.aux
+main.pdf
+*.log
+*.bbl 
+*.blg 
+*.ilg 
+*.ind 
+*.toc
+log.txt
